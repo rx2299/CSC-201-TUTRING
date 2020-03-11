@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter the first String: ");
+        String firststr = in.next();
+
+        System.out.println("Please enter the second String: ");
+        String secondstr = in.next();
+
+        System.out.println("Please enter the third String: ");
+        String thirdstr = in.next();
+
+        if (firststr.compareTo(secondstr) > 0 && firststr.compareTo(thirdstr) < 0) {
+            System.out.println(firststr);
+        }else if (firststr.compareTo(thirdstr) > 0 && firststr.compareTo(secondstr) < 0){
+            System.out.println(firststr);
+        } else if (secondstr.compareTo(firststr) > 0 && secondstr.compareTo(thirdstr) < 0) {
+            System.out.println(secondstr);
+        }else if (secondstr.compareTo(thirdstr) > 0 && secondstr.compareTo(firststr) < 0) {
+            System.out.println(secondstr);
+        }else if (thirdstr.compareTo(secondstr) > 0 && thirdstr.compareTo(firststr) < 0) {
+            System.out.println(thirdstr);
+        }else if (thirdstr.compareTo(firststr) > 0 && thirdstr.compareTo(secondstr) < 0) {
+            System.out.println(thirdstr);
+        }
+    }
+}
