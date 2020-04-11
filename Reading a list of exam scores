@@ -63,4 +63,52 @@ public class Main {
 
 }
 
+__________________________________________________________________________
+import java.util.Scanner; 
+/** 
+Program to  write a program to read a list of exam scores given as integer percentages in the range 0 to 100 and 
+Name: Sandy Yeung
+Computer Science Lab 4
+*/
+public class Main { 
+	public static void main(String[] args) {
+		
 
+		int gradeA = 0;
+		int gradeB = 0;
+		int gradeC = 0;
+		int gradeD = 0;
+		int gradeF = 0;
+		int count  = 0;
+
+		 Scanner keyboard = new Scanner(System.in); 
+			System.out.println("Enter the exam scores list (1 to 100) and enter any negative scores to the end of the list:   ");
+
+					int scoresList = keyboard.nextInt(); 
+			        while (scoresList > 0) 
+			        {
+			   
+			         if (scoresList >=0 && scoresList <= 59)
+			                gradeF++;
+			             else if (scoresList >=60 && scoresList <= 69 )
+			                gradeD++;
+			             else if (scoresList >=70 && scoresList <= 79)
+			                gradeC++;
+			             else if (scoresList >=80 && scoresList <= 89)
+			                gradeB++;
+			             else if (scoresList >=90 && scoresList <= 100)
+			            	 gradeA++;
+			                 count++;
+			         	scoresList= keyboard.nextInt ();
+			         	
+			            }
+			        
+				 System.out.println ("Total number of grades =" + count); 
+		         System.out.println ("Number of A's =" + gradeA); 
+		         System.out.println ("Number of B's =" + gradeB); 
+		         System.out.println ("Number of C's =" + gradeC); 
+		         System.out.println ("Number of D's =" + gradeD); 
+		         System.out.println ("Number of F's =" + gradeF); 
+		       
+	}
+}
