@@ -1,0 +1,66 @@
+
+ 
+
+ import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        int A = 0;
+        int B = 0;
+        int C = 0;
+        int D = 0;
+        int F = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a list of scores, and split them with spaces");
+        System.out.println("**** Enter negative numbers to stop recording ****");
+
+        String input = scanner.nextLine();
+        String[] stringArr = input.split(" ");
+
+        final int SIZE = stringArr.length;
+        int[] scoresList = new int[SIZE];
+
+        for (int i = 0; i < SIZE; i++) {
+            scoresList[i] = Integer.parseInt(stringArr[i]);
+            if (scoresList[i] < 0) {
+                scanner.close();
+                break;
+            }
+        }
+
+
+        for (int i = 0; i < SIZE; i++) {
+            if (scoresList[i] >= 90 && scoresList[i] <= 100) {
+                A++;
+            }
+            if (scoresList[i] >= 80 && scoresList[i] < 90) {
+                B++;
+            }
+            if (scoresList[i] >= 70 && scoresList[i] < 80) {
+                C++;
+            }
+            if (scoresList[i] >= 60 && scoresList[i] < 70) {
+                D++;
+            }
+            if (scoresList[i] < 60 && scoresList[i] >= 0) {
+                F++;
+            }
+
+        }
+        System.out.println(" ");
+        System.out.println("Total number of grades = " + (A + B + C + D + F));
+        System.out.println("Number of A’s =" + A);
+        System.out.println("Number of B’s =" + B);
+        System.out.println("Number of C’s =" + C);
+        System.out.println("Number of D’s =" + D);
+        System.out.println("Number of F’s =" + F);
+
+
+    }
+
+}
+
+
